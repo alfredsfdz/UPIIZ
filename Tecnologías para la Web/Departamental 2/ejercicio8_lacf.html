@@ -1,0 +1,371 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ejercicio 8 - Denominacion Electivas</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/slicknav.min.css">
+    <!-- amcharts css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/typography.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/default-css.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/styles.css">
+    <link rel="stylesheet" href="../srtdash-admin-dashboard-master/srtdash/assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="/srtdash-admin-dashboard-master/srtdash/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>Calculadora Basica</span></a>
+                                <ul class="collapse">
+                                    <li class="active"><a href="ejercicio5_lacf.html">Calculadora Basica</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>Calculadora Cientifica</span></a>
+                                <ul class="collapse">
+                                    <li class="active"><a href="ejercicio6_lacf.html">Calculadora Cientifica</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>Conversor de Unidades</span></a>
+                                <ul class="collapse">
+                                    <li class="active"><a href="ejercicio7_lacf.html">Conversor de Unidades</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-table"></i>
+                                    <span>CRUD denominacion</span></a>
+                                <ul class="collapse">
+                                    <li class="active"><a href="ejercicio8_lacf.html">Denominacion de Electivas</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->
+        <!-- main content area start -->
+        <div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Denominacion De Electivas </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <!-- Dark table start -->
+                    <div class="col-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="header-title ">Alta de denominacion <!-- Large modal start -->
+                                <button type="button" style="float: right" class="btn btn-success btn-flat btn-xs" data-toggle="modal" data-target=".denominacion">Nueva denominacion
+                                </button>
+                                    
+                                    <!-- Modal Actulizar -->
+                                    <div class="modal fade actualizar">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Actualizar denominaciones</h5>
+                                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class= "row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Eje tematico</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder="Inquietudes vocacionales propias">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Modalidad</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder="Docencia">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class= "row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Descripcion de creditos</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder="1 credito por cada 16 horas">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Factor</label>
+                                                            <input type="number" class="form-control" id="input_longitud_1" value="0" min="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class= "row">
+                                                <div class="col-12">
+                                                    <div class="form group"></div>
+                                                    <label>Ejemplos de actividades</label>
+                                                    <textarea class="form-control" rows="6" placeholder="Cursos ofertados en las Unidades Academicas del IPN
+                                                    Estudio de una lengua extranjera que no se considere requisito de titulacion
+                                                    Cursos de programas informaticos
+                                                    Cursos de otras insituciones educativas con las que se tenga convenio"  ></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn btn-success">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <!-- Modal Nueva denominacion -->
+                                <div class="modal fade denominacion">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Alta de denominaciones</h5>
+                                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class= "row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Eje tematico</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder="Digite eje tematico">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Modalidad</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder=" Digite modalidad">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class= "row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Descripcion de creditos</label>
+                                                            <input type="text" class="form-control" id="input_longitud_1" placeholder="Digite descripcion">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Factor</label>
+                                                            <input type="number" class="form-control" id="input_longitud_1" value="0" min="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class= "row">
+                                                <div class="col-12">
+                                                    <div class="form group"></div>
+                                                    <label>Ejemplos de actividades</label>
+                                                    <textarea class="form-control" rows="6" placeholder="Ingrese ejemplo de actividades"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn btn-success">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    <!-- Large modal modal end --></h1>
+                                <div class="data-tables datatable-dark">
+                                    <table id="dataTable3" class="text-center">
+                                        <thead class="text-capitalize">
+                                            <tr>
+                                                <th>Eje tematico</th>
+                                                <th>Modalidad</th>
+                                                <th>Creditos</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Enfasis en la profesion</td>
+                                                <td>Docencia</td>
+                                                <td>1 x 16 horas</td>
+                                                <td>  
+                                                    <ul class="d-flex justify-content-center">
+                                                            <li class="mr-3"><a data-toggle="modal" data-target=".actualizar" href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                            <li><a data-toggle="modal" data-target="#eliminar" href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                        
+                                                        <!-- Modal eliminar -->
+                                                        
+                                                        <div class="modal fade" id="eliminar">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">¿Desea eliminar el registro?</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Enfasis en la profesion</td>
+                                                <td>Trabajo de campo supervisado</td>
+                                                <td>1 x 50 horas</td>
+                                                <td>  
+                                                    <ul class="d-flex justify-content-center">
+                                                            <li class="mr-3"><a data-toggle="modal" data-target=".actualizar" href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                            <li><a data-toggle="modal" data-target="#eliminar" href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                        <!-- Modal eliminar-->
+                                                        <div class="modal fade" id="eliminar">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">¿Desea eliminar el registro?</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Enfasis en la profesion</td>
+                                                <td>Independientes</td>
+                                                <td>1 x 20 horas</td>
+                                                <td>  
+                                                    <ul class="d-flex justify-content-center">
+                                                            <li class="mr-3"><a data-toggle="modal" data-target=".actualizar" href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                            <li><a data-toggle="modal" data-target="#eliminar" href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                        <!-- Modal eliminar -->
+                                                        <div class="modal fade" id="eliminar">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">¿Desea eliminar el registro?</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Complementarias a la formacion</td>
+                                                <td>Docencia</td>
+                                                <td>1 x 16 horas</td>
+                                                <td>  
+                                                    <ul class="d-flex justify-content-center">
+                                                            <li class="mr-3"><a data-toggle="modal" data-target=".actualizar" href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                            <li><a data-toggle="modal" data-target="#eliminar" href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                        <!-- Modal eliminar-->
+                                                        <div class="modal fade" id="eliminar">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title">¿Desea eliminar el registro?</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dark table end -->
+                </div>
+            </div>
+        </div>
+        <!-- main content area end -->
+    </div>
+    <!-- page container area end -->
+    <!-- jquery latest version -->
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/popper.min.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/bootstrap.min.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/owl.carousel.min.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/metisMenu.min.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Start datatable js -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <!-- others plugins -->
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/plugins.js"></script>
+    <script src="../srtdash-admin-dashboard-master/srtdash/assets/js/scripts.js"></script>
+</body>
+
+</html>
